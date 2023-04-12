@@ -1,0 +1,22 @@
+Collection JAVA
+
+É um conjunto de interface, que faz-se possível realizar o tratamento desses dados em forma conjunta.
+
+Link de referência: https://www.devmedia.com.br/java-collections-como-utilizar-collections/18450
+
+
+Stream
+
+* Classes anônimas: são estanciadas e declaradas em uma única instrução. Nesse caso não há necessidade de ser criado uma classe.
+No caso, vc tem que estar ciente, que essa classe é para momentos que será estanciada somente uma vez.
+
+
+* Functional Interface: sempre terá um método a ser implantado (**Interface)
+    - Comparator:
+    - Consumer:
+    - Function:
+    - Predicate: 
+
+* Lambida: função sem declaração (quase a mesma ideia de classe anônima): (argumento) -> (corpo)
+
+* Reference Method: permite fazer a referência de um método ou construtor de uma classe  e assim indicar que ele deverá ser utilizado em um ponto expecífico do código. Utiliza-se o "::" para realizar a referência. Em resumo serve para resumir a Lmabida Expressions.
