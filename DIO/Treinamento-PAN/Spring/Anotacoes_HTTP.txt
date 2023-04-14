@@ -1,0 +1,26 @@
+# Anotações
+
+### Protocolo HTTP (Hypertext Transfer Protoco)
+    Esse protocolo realiza a comunicação entre duas máquinas, basicamente, (Ex.: Cliente com o Servidor).
+    Normalmente vemos na WEb em um endereço de site (http://pomadasparabigode.com).
+        Basicamente o navegador está realizando uma requisição para o servidor "pomadasparabigode.com".
+    * Request e response * 
+        - O Cleinte solicita (Request) e o servidor responde (response) com as informações (200 OK);
+        - GET – é usado quando o cliente deseja obter recursos do servidor;
+        - POST – é usado quando o cliente deseja enviar dados para processamento ao servidor, como os dados de um formulário, por exemplo;
+
+    A resposta(response) tem um formato/estrutura. Pode ser por XML ou JSON (baseado no JS - tem a sintaxe mais leve e fácil).
+
+### Protocolo SSL (Secure Sockets Layer)
+    SSL significa Secure Sockets Layer, um tipo de segurança digital que permite a comunicação criptografada entre um domínio de site e um navegador. Atualmente a tecnologia se encontra depreciada e está sendo completamente substituída pelo TLS.
+    
+    * HandShake:    faz uma verificação inicial, entre cliente e servidor, tendo chave public e private.
+    * Derivation:    
+    * Transfer:   
+
+### WebSocket API (P. 80 e 443)
+    É uma tecnologia avançada que torna possível abrir uma sessão de comunicação interativa entre o navegador do usuário e um servidor. Com esta API, você pode enviar mensagens para um servidor e receber respostas orientadas a eventos sem ter que consultar o servidor para obter uma resposta. (Conexão Bidirecional)
+
+    * Basicamente o WebSocket roda dentro do HTTP utilizando da sua estrutura.
+
+    
