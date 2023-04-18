@@ -1,0 +1,17 @@
+{
+    "azul": {
+        "hex": "#0000FF",
+        "nome": "azul",
+        "rgb": "0,0,255"
+    },
+    "verde": {
+        "hex": "#00FF00",
+        "nome": "verde",
+        "rgb": "0,255,0"
+    },
+    "vermelho": {
+        "hex": "#FFFF00",
+        "nome": "Vermelhor",
+        "rgb": "255,0,0"
+    }
+}
