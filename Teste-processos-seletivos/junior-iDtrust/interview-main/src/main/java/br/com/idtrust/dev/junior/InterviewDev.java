@@ -89,7 +89,21 @@ public class InterviewDev {
         System.out.println("Soma dos recebiveis vencidos: " + somaFinalVencidos);
         //========================================================================================================
         //======================================================================================================== 
-         System.out.println("3 - Formate para moeda Real o valor do recebivel com vencimento 25/07/2023");
+        System.out.println("======================================================================================================== ");
+        System.out.println("\n3 - Formate para moeda Real o valor do recebivel com vencimento 25/07/2023");
+        
+        //realizei um for para pegar o valor da data informada
+        for(Recebivel recebivel: RECEBIVEIS) {
+        	//realizando a verificção da data onde pego no set e verifico qual é igual a data informada
+        	if(recebivel.getDataVencimento().equals(LocalDate.parse("25/07/2023", DateTimeFormatter.ofPattern("dd/MM/yyyy")))) {
+        		//pegando o valor e convertendo para double, para trabalhar nesse formato
+        		Double valorConvertido = Double.parseDouble(recebivel.getValor().toString());
+        		//mostrando o valor convertendo em REAL R$##,##
+        		System.out.println(NumberFormat.getCurrencyInstance(new Locale("pt", "BR")).format(valorConvertido));
+        	}
+        }
+        //========================================================================================================   
+        //========================================================================================================   
          System.out
                  .println("4 - Print o prazo em dias entre emissao e vencimento do recebivel com vencimento 12/10/2023");
          System.out.println("5 - Print a concatenação de todos os campos do recebivel separando por ;");
