@@ -122,7 +122,13 @@ public class InterviewDev {
         }
         //========================================================================================================   
         //======================================================================================================== 
-         System.out.println("6 - Formate a data 2023-06-25 do recebivel para o formato dd/MM/yyyy");
+
+        System.out.println("======================================================================================================== ");
+        System.out.println("\n6 - Formate a data 2023-06-25 do recebivel para o formato dd/MM/yyyy");
+        
+        System.out.println(LocalDate.parse("2023-06-25").format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        //========================================================================================================   
+        //======================================================================================================== 
          System.out.println("");
          System.out.println("Exercício extra:");
          System.out.println(
