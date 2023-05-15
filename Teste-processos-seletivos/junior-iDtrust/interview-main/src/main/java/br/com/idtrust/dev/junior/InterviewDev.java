@@ -130,21 +130,68 @@ public class InterviewDev {
         //========================================================================================================   
         //======================================================================================================== 
          System.out.println("");
+         System.out.println("======================================================================================================== ");
+         System.out.println("");
          System.out.println("Exercício extra:");
          System.out.println(
-                 "7 - Dado uma lista da variável `valores` abaixo, acrescente um novo valor de acordo com as regras a seguir:");
-         System.out.println("    -  R$5,90 para valores menor e igual que R$100,00");
+                 "7 - Dado uma lista da variável `valores` abaixo, "
+                 + "acrescente um novo valor de acordo com as regras a seguir:");
+         System.out.println("    -  R$5,90 para valores menor e igual que R$100,00"); //estava como e, porém na incrmentação ou coloquei como OU, pois não faria sentido
          System.out.println("    -  R$15,00 para valores menor que R$20,00");
          System.out.println("    -  R$4,33 para valores maior que R$100,00");
          System.out.println("    -  R$2,10 para valores maior que R$200,00");
          System.out.println("    -  R$3,55 para valores igual que R$150,00");
-         System.out.println(
-                 "    Print o novo resultado na saída da condição de validação e no final print a soma de todos os novos valores da lista");
-         List<BigDecimal> valores = Arrays.asList(new BigDecimal("88.88"), new BigDecimal("17.01"),
-                 new BigDecimal("20.00"), new BigDecimal("150.00"), new BigDecimal("124.21"), new BigDecimal("247.09"),
-                 new BigDecimal("100.00"), new BigDecimal("4.99"));
-
-         System.out.println("Boa Sorte!");
+         System.out.println("Print o novo resultado na saída da condição de validação "
+         		+ "e no final print a soma de todos os novos valores da lista");
+         List<BigDecimal> valores = Arrays.asList(
+         		new BigDecimal("88.88"), new BigDecimal("17.01"), new BigDecimal("20.00"),new BigDecimal("150.00"),
+         		new BigDecimal("124.21"), new BigDecimal("247.09"), new BigDecimal("100.00"), new BigDecimal("4.99"));
+        
+         //mostrando somente para vizualizar os valores iniciais
+         valores.stream().forEach(x -> System.err.println(x));
+         
+         //criando uma lista, para ser verificado
+         List<BigDecimal> valoresAcrescentar = Arrays.asList(new BigDecimal("5.90"), new BigDecimal("15.00"), new BigDecimal("4.33"), new BigDecimal("2.10"), new BigDecimal("3.55"));
+         List<BigDecimal> valoresComparar = Arrays.asList(new BigDecimal("100.00"), new BigDecimal("20.00"), new BigDecimal("200.00"), new BigDecimal("150.00"));
+         
+         ///realizando a verificção para realizar as operações de acordo com os valores passados
+         for(int i = 0; i < valores.size(); i++) {
+         	
+         	//verificação do valor <= 100
+         	if((valores.get(i).compareTo(valoresComparar.get(0)) == -1) || (valores.get(i).equals(valoresComparar.get(0)))) {
+         		valores.set(i, valores.get(i).add(valoresAcrescentar.get(0)));
+         	}
+         	
+         	//verificação do valor < 20.00
+         	if((valores.get(i).compareTo(valoresComparar.get(1)) == -1)) {
+         		valores.set(i, valores.get(i).add(valoresAcrescentar.get(1)));
+         	}       	
+         	
+         	//verificação do valor > 100.00
+         	if((valores.get(i).compareTo(valoresComparar.get(0)) == 1)) {
+         		valores.set(i, valores.get(i).add(valoresAcrescentar.get(2)));
+         	}  
+         	
+         	//verificação do valor > 200.00
+         	if((valores.get(i).compareTo(valoresComparar.get(2)) == 1)) {
+         		valores.set(i, valores.get(i).add(valoresAcrescentar.get(3)));
+         	}  
+         	
+         	//verificção do valor == 150.00
+         	if(valores.get(i).equals(valoresComparar.get(3))) {
+         		valores.set(i, valores.get(i).add(valoresAcrescentar.get(4)));
+         	}
+         	System.out.println("Valor: " + valores.get(i));
+         }
+         //criando uma variavel para somar os valores
+         BigDecimal somaFinal = BigDecimal.valueOf(0);
+         
+         //realizando a soma dos valores
+         for(BigDecimal bigDecimal: valores) {
+         	somaFinal = somaFinal.add(bigDecimal);
+         }
+         //mostrando a soma final
+         System.out.println("Soma: " + somaFinal);
     }
 
     
