@@ -36,7 +36,32 @@ public class InterviewDev {
         System.out.println("======================================================================================================== ");
         //finalização da vizualização do set
         
-         System.out.println("1 - Print a soma agrupando as mesmas datas de vencimentos");
+      //========================================================================================================
+        //========================================================================================================
+        //Inio das verificações
+        System.out.println("\n1 - Print a soma agrupando as mesmas datas de vencimentos");
+        
+        //para facilitar vou criar um map com as datas de vencimento para separar
+        //estou colocando a minha chave como LocalDate e vai armazenar uma list do tipo Recebivel
+        Map<LocalDate,BigDecimal> mapReceb = new LinkedHashMap<>();
+        
+        //passar por todos os valores do SET e passar de acordo com o MAP, somando os valores
+        for(Recebivel r: RECEBIVEIS) {
+        	///fazendo uma comparação da data de recebivel, verificando se existe ou não como key no MAP
+        	if(!mapReceb.containsKey(r.getDataVencimento())) {
+        		//se não existe, ele cria uma nova
+        		mapReceb.put(r.getDataVencimento(), r.getValor());
+        	}else {
+        		//se existe, ele add o novo valor no campo value do map, da key passada
+        		BigDecimal valor = mapReceb.get(r.getDataVencimento()).add(new BigDecimal(r.getValor().toString()));
+	        	mapReceb.put(r.getDataVencimento(), valor);
+        	}
+        }
+        //mostrando o resultado obtido com a informação da data de vencimento
+        for(Map.Entry<LocalDate,BigDecimal> entry: mapReceb.entrySet()) {
+        	System.out.println("Data de vencimento: " + entry.getKey() + " | Valor somado: " + entry.getValue());
+        }
+        System.out.println("======================================================================================================== ");
          System.out.println("2 - Print a soma dos recebiveis ja vencidos");
          System.out.println("3 - Formate para moeda Real o valor do recebivel com vencimento 25/07/2023");
          System.out
