@@ -62,7 +62,33 @@ public class InterviewDev {
         	System.out.println("Data de vencimento: " + entry.getKey() + " | Valor somado: " + entry.getValue());
         }
         System.out.println("======================================================================================================== ");
-         System.out.println("2 - Print a soma dos recebiveis ja vencidos");
+        //========================================================================================================
+        //========================================================================================================   
+        System.out.println("\n2 - Print a soma dos recebiveis ja vencidos");
+        
+        //pegando a data atual e colocando em uma variavel
+        LocalDate dataAtual = LocalDate.now();
+        
+        //criando um set caso for preciso, armazenando os vencidos, para se caso quiser trabalhar com esses dados depois
+        Set<Recebivel> recbVencidos = new LinkedHashSet<>();
+        
+        //adicionando no set
+        for(Recebivel recebivel: RECEBIVEIS) {
+        	if(recebivel.getDataVencimento().isBefore(dataAtual)) {
+        		recbVencidos.add(recebivel);
+        	}
+        }
+        
+        //mostrando os recebiveis, e a soma total no final
+        BigDecimal somaFinalVencidos = BigDecimal.valueOf(0);
+        
+        for(Recebivel recebivel: recbVencidos) {
+        	System.out.println(recebivel.toString());
+        	somaFinalVencidos = somaFinalVencidos.add(new BigDecimal(recebivel.getValor().toString()));
+        }
+        System.out.println("Soma dos recebiveis vencidos: " + somaFinalVencidos);
+        //========================================================================================================
+        //======================================================================================================== 
          System.out.println("3 - Formate para moeda Real o valor do recebivel com vencimento 25/07/2023");
          System.out
                  .println("4 - Print o prazo em dias entre emissao e vencimento do recebivel com vencimento 12/10/2023");
