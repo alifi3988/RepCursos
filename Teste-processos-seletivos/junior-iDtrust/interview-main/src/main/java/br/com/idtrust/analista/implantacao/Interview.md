@@ -21,6 +21,7 @@ Lista de valores para o teste: sexo;idade
 	f) feminino;60
 
 ---
+##### ** A solução desse exercício se encontra no endereço: <a href="https://github.com/alifi3988/RepCursos/blob/main/Teste-processos-seletivos/junior-iDtrust/interview-main/src/main/java/br/com/idtrust/analista/implantacao/ResolucaoExtra_01.java"> Acesse aqui! </a>
 
 ##### 2 - De acordo com o algoritmo a seguir, escolha uma das alternativas abaixo.
 ```
@@ -41,4 +42,15 @@ print(“O valor da soma é ” + soma)
 	b) O valor da soma é 69
 	c) O valor da soma é 79
 	d) O valor da soma é 93
+	
+##### ** A solução do ex 2 é: Resposta C (O valor da soma é 79)
+3 - 57 (inicio)
+3 - 54 
+4 - 50 
+5 - 55
+6 - 61
+7 - 68
+8 - 60
+9 - 69
+10 - 79 (fim)
 
