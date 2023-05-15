@@ -104,8 +104,17 @@ public class InterviewDev {
         }
         //========================================================================================================   
         //========================================================================================================   
-         System.out
-                 .println("4 - Print o prazo em dias entre emissao e vencimento do recebivel com vencimento 12/10/2023");
+        System.out.println("======================================================================================================== ");
+        System.out.println("\n4 - Print o prazo em dias entre emissao e vencimento do recebivel com vencimento 12/10/2023");
+        LocalDate dataComparar = LocalDate.parse("12/10/2023", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        for(Recebivel recebivel: RECEBIVEIS) {
+        	if(recebivel.getDataVencimento().equals(dataComparar)) {
+        		Long prazo = ChronoUnit.DAYS.between(recebivel.getDataEmissao(), dataComparar);
+        		System.out.println("Prazo da data de Emissão: " + recebivel.getDataEmissao() + " a data de Vencimento: " + recebivel.getDataVencimento() + " => " + prazo + " dias");
+        	}
+        }
+        //========================================================================================================   
+        //========================================================================================================  
          System.out.println("5 - Print a concatenação de todos os campos do recebivel separando por ;");
          System.out.println("6 - Formate a data 2023-06-25 do recebivel para o formato dd/MM/yyyy");
          System.out.println("");
