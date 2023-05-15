@@ -23,10 +23,19 @@ public class InterviewDev {
 
     public static void main(String[] args) throws Exception {
 
-    	 System.out.println("Faça os exercícios abaixo usando os dados pré-criados na variável `RECEBIVEIS`.");
-         System.out.println("Peço que prepare a resolução logo abaixo de cada enunciado.");
-         System.out.println("");
-
+    	System.out.println("Faça os exercícios abaixo usando os dados pré-criados na variável `RECEBIVEIS`.");
+        System.out.println("Peço que prepare a resolução logo abaixo de cada enunciado.");
+        System.out.println("");
+        //========================================================================================================
+        System.out.println("======================================================================================================== ");
+        //somente para verificação inicial dos valores inseridos
+        System.out.println("Mostrando o valor inicial somente para vizualização");
+        for(Recebivel receb: RECEBIVEIS) {
+        	System.out.println(receb.toString());
+        }
+        System.out.println("======================================================================================================== ");
+        //finalização da vizualização do set
+        
          System.out.println("1 - Print a soma agrupando as mesmas datas de vencimentos");
          System.out.println("2 - Print a soma dos recebiveis ja vencidos");
          System.out.println("3 - Formate para moeda Real o valor do recebivel com vencimento 25/07/2023");
