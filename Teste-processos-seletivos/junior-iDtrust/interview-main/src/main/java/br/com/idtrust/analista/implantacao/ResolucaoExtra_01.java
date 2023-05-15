@@ -34,11 +34,11 @@ public class ResolucaoExtra_01 {
 			System.out.println("APOSENTADO");
 		}
 		
-		else if(sexo == "feminino" && idade >= 60) {
+		else if((sexo.equals("feminino")) && (idade >= 60)) {
 			System.out.println("APOSENTADA");
 		}
 		
-		else if(idade >= 13 && idade < 18) {
+		else if((idade >= 13) && (idade < 18)) {
 			System.out.println("ADOLESCENTE");
 		}
 		
