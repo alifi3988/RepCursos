@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ff66dce-ada5-444b-a07b-194f625192c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../first-poo-python/pessoa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DIO/Treinamento-PAN/quick-start-maven/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DIO/Treinamento-PAN/quick-start-maven/src/main/java/com/MavenProjeto/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../DIO/Treinamento-PAN/quick-start-maven/src/test/java/com/MavenProjeto/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/RepCursos/RepCursos/Python_FATEC/Tópicos Especiais em Informática/projeto-lojistas&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="exercicio-poo-controle-tv" />

@@ -1,6 +1,7 @@
 from Televisor import Televisor
 
-televisao = Televisor()
+televisao = Televisor(wxPython
+                      )
 
 print(f"Televisão: {televisao}")
 print(f"Canal atual: {televisao.canal}")
